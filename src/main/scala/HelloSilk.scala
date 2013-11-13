@@ -3,6 +3,7 @@ package xerial.silk.bootstrap
 
 // Import Silk functionality
 import xerial.silk.Silk._
+import java.io.File
 
 /**
  * An example of Silk workflow
@@ -10,6 +11,6 @@ import xerial.silk.Silk._
 class HelloSilk {
    def hello = c"echo Hello Silk!!"
 
-   def lineCount(f:File) = loadFile(f).lines.size
-   def wordCount(f:File) = loadFile(f).lines.map(_.split("\\s+")).map(_.size).sum
+   def lineCount(file:String) = loadFile(file).lines.size
+   def wordCount(file:String) = loadFile(file).lines.map(_.split("\\s+")).map(_.size).sum
 }
