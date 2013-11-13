@@ -9,6 +9,7 @@ import java.io.File
  * An example of Silk workflow
  */
 class HelloSilk {
+   // say hello
    def hello = c"echo Hello Silk!!"
 
    def lineCount(file:String) = loadFile(file).lines.size
