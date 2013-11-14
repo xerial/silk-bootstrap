@@ -15,7 +15,7 @@ project:
 $ mkdir myproject
 $ cd myproject
 $ curl -L https://github.com/xerial/silk-bootstrap/archive/master.tar.gz | tar xvz --strip-components=1
-$ ./sbt silk-run HelloSilk:wc README.md 
+$ ./sbt silk eval HelloSilk:wordCount README.md 
 ```
 
 
