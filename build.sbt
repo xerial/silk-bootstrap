@@ -1,3 +1,5 @@
+import SilkKeys._
+
 packSettings
 
 silkSettings
