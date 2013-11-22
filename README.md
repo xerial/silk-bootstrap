@@ -15,10 +15,30 @@ project:
 $ mkdir myproject
 $ cd myproject
 $ curl -L https://github.com/xerial/silk-bootstrap/archive/master.tar.gz | tar xvz --strip-components=1
-$ ./sbt silk eval HelloSilk:wordCount README.md 
+$ ./sbt -Dloglevel=debug
+sbt> silk eval Sort:objectSort -N 100000
 ```
 
+#### Creating IntelliJ project files
 
-**Create IntelliJ project files**
+    sbt> gen-idea
 
-    $ ./sbt gen-idea
+
+#### Running a workflow while programming
+
+    sbt> ~silk eval Sort:objectSort -N 100000
+
+
+#### Running a workflow in Silk cluster
+
+    # Edit $HOME/.silk/hosts file to list up node names to use
+    # Start ZooKeeper and SilkClients
+    $ silk cluster start
+    # Check cluster status
+    $ silk cluster
+
+    # Run the distributed workflow in the cluster
+    $ ./sbt -Dloglevel=debug
+    sbt> silk eval --framework cluster Sort:objectSort -N 10000000 -M 20 -r 10
+
+
