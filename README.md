@@ -8,8 +8,7 @@ A kick-start project template for programming with Silk.
 Download [tar.gz archive](https://github.com/xerial/silk-bootstrap/archive/master.tar.gz) or
 [.zip](https://github.com/xerial/silk-bootstrap/archive/master.zip) of this project, then extract the contents.
 
-Alternatively, you can run the following commands to extract the scala-min
-project:
+Alternatively, you can run the following commands to extract the silk-bootstrap project:
 
 ```shell
 $ mkdir myproject
